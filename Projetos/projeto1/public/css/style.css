@@ -1,0 +1,89 @@
+body{
+    background-color: #E7E7E7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button{
+    background-color: #54545600;
+    box-shadow: #54545600 ;
+}
+
+form{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+}
+
+.card{
+    /* Alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* Spacing */
+    margin: 8px;
+    padding: 0px 10px;
+
+    /* Styling */
+    border-radius: 9px;
+    background-color: #545456;
+    box-shadow: #5454565b 1px 3px 6px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    color: #edf4f6;
+}
+
+.row{
+    /* Alignment */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* Size */
+    width: 100%;    
+}
+
+.row > .buttons{
+    justify-content: flex-end;
+}
+
+.firstName{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.lastName{
+    font-size: 15px;
+    font-style: italic;
+}
+
+.birthday{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.imagem{
+    border: 1px solid orange;
+}
+
+.buttons{
+    /* Size */
+    width: 100%;
+
+    /* Alignment */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    /* spacing */
+    margin: 5px;
+}

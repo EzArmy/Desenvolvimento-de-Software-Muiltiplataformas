@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Home</title>
+</head>
+
+<body class="">
+    <h1>SEJA BEM-VINDO</h1>
+
+    <h2>Deseja cadastrar mais usuários?</h2>
+    <a href="/userCad">Adicionar usuários</a>
+
+    <h2>Lista de usuários registrados:</h2>
+
+    <div class="container">
+        <% users.forEach(function(user, index){ %>
+            <div class="card bg-gray-800">
+
+                <div class="row">
+                    <!-- BTNS -->
+                    <div class="buttons">
+                        <form action='/delete/<%= user.id %>' method="post">
+                            <button type="submit">
+                                <i class="bi bi-trash-fill" style="font-size: 2em; color: #ff0000;"></i>
+                            </button>
+                        </form>
+
+                        <button class="btn-primary">
+                            <i class="bi bi-pencil-fill " style="font-size: 2em; color: #000;"></i>
+                        </button>
+
+                        <button class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75">
+                            TESTE
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <!-- datas -->
+                    <div class="info">
+                        <div class="firstName">
+                            <%= user.name %>
+                        </div>
+                        <div class="lastName">
+                            <%= user.lastName %>
+                        </div>
+                        <p class="birthday">
+                            <%= user.birthday %>
+                        </p>
+                    </div>
+
+                    <!-- image -->
+                    <div class="imagem">
+                        <!-- Usando a variável userPhotos para obter o caminho da imagem -->
+                        <img src="/uploads/<%= user.userPhoto %>" style="height: 200px; width: 200px;"
+                            alt="Imagem do usuário">
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+
+</body>
+
+</html>

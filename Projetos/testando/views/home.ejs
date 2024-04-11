@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HOME</title>
+</head>
+<body class="bg-pink-50">
+    <h1 class="">Seu perfil</h1>
+
+    <!-- Profile card -->
+    <div style="display:flex; flex-direction: row; align-items: center;">
+        <img src="/uploads/<%= userFinder.userName %>/<%= userFinder.profilePhoto %>" style="width: 100px; height: 100px; border-radius: 100%; " alt="user image">
+    
+        <label for="">
+            Name: <%= userFinder.userName %>
+        </label>
+    </div>
+    <div>
+        <a href="/Post">Criar um post</a>
+        <hr>
+    </div>
+
+    <!-- Apresentando os posts -->
+    <% userPosts.forEach((posts)=>{ %>
+    
+        <div>
+            <h3><%= posts.title %></h3>
+            <p><%= posts.content %></p>
+            <img src="./uploads/<%= userFinder.userName/ %>" alt="">
+        </div>
+
+    <% }); %>
+</body>
+</html>
